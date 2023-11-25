@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+         #
+#    By: codespace <codespace@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/14 17:03:30 by magonzal          #+#    #+#              #
-#    Updated: 2023/11/14 18:57:20 by magonzal         ###   ########.fr        #
+#    Updated: 2023/11/25 12:20:13 by codespace        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= main.cpp Converter.cpp Checker.cpp
+SRCS	= main.cpp ScalarConverter.cpp Checker.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 
@@ -18,13 +18,13 @@ SRCSB	=
 
 OBJB	= ${SRCSB:.cpp=.o}
 
-NAME	= converter
+NAME	= convert
 
 CXX	= c++
 
 RM	= rm -f
 
-CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -g3 
+CXXFLAGS	= #-Wall -Wextra -Werror -std=c++98 -g3 
 
 .c.o:
 		${CXX} ${CXXFLAGS} -c $< -o ${<:.cpp=.o}

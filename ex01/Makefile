@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+         #
+#    By: codespace <codespace@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/14 19:30:45 by magonzal          #+#    #+#              #
-#    Updated: 2023/11/14 19:50:16 by magonzal         ###   ########.fr        #
+#    Updated: 2023/11/25 12:37:29 by codespace        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS	= main.cpp Serialize.cpp
+SRCS	= main.cpp Serializer.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 

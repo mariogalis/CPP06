@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 17:03:32 by magonzal          #+#    #+#             */
-/*   Updated: 2023/11/14 19:15:07 by magonzal         ###   ########.fr       */
+/*   Updated: 2023/11/25 12:17:19 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Converter.hpp"
+#include "ScalarConverter.hpp"
 
 int error(std::string str)
 {
@@ -22,18 +22,19 @@ int error(std::string str)
 int main(int argc, char *argv[])
 {
 	std::string str;
+	ScalarConverter *converter;
 	
 	if(argc != 2)
 		return error("ERROR: BAD NUMBER OF ARGUMENTS");
 	str = argv[1];
 	if(checkint(str))
-		intconversion(str);
+		converter->intconversion(str);
 	else if(checkfloat(str))
-		floatconversion(str);
+		converter->floatconversion(str);
 	else if(checkchar(str))
-		charconversion(str[0]);
+		converter->charconversion(str[0]);
 	else if(checkdouble(str))
-		doubleconversion(str);
+		converter->doubleconversion(str);
 	else
 		return error("NO CONVERSION POSSIBLE");
 	return 0;

@@ -1,18 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   converter.cpp                                      :+:      :+:    :+:   */
+/*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 18:13:38 by magonzal          #+#    #+#             */
-/*   Updated: 2023/11/14 19:18:21 by magonzal         ###   ########.fr       */
+/*   Updated: 2023/11/25 12:45:56 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Converter.hpp"
+#include "ScalarConverter.hpp"
 
-void	charconversion(char c)
+
+						/*---------Contructores y Destructores--------*/
+
+ScalarConverter::ScalarConverter(void) 
+{
+	std::cout << GREEN << "ScalarConverter constructor called" << std::endl << RESET;    
+}
+
+ScalarConverter::~ScalarConverter(void)
+{
+	std::cout << RED << "The ScalarConverter is DELETED" << std::endl << RESET;
+}
+
+ScalarConverter::ScalarConverter(const ScalarConverter &copy)
+{
+	*this = copy;
+	 std::cout  << GREEN << "ScalarConverter clone machine called" << std::endl << RESET;
+}
+
+
+						/*---------FUNCIONES--------*/
+						
+
+void	ScalarConverter::charconversion(char c)
 {
 	std::cout << "char: " << c << std::endl;
 	std::cout << "int: " << static_cast<int>(c) << std::endl;
@@ -21,7 +44,7 @@ void	charconversion(char c)
 	std::cout << "double: " << static_cast<double>(c) << std::endl;
 }
 
-void	intconversion(std::string str)
+void	ScalarConverter::intconversion(std::string str)
 {
 	int	n;
  
@@ -46,7 +69,7 @@ void	specialfloat(std::string str)
 	std::cout << "double: " << str.substr(0, str.length() - 1) << std::endl;
 }
 
-void	floatconversion(std::string str)
+void	ScalarConverter::floatconversion(std::string str)
 {
 	float f;
 
@@ -81,7 +104,7 @@ void	specialdouble(std::string str)
 }
 
 
-void	doubleconversion(std::string str)
+void	ScalarConverter::doubleconversion(std::string str)
 {
 	double	d;
 
