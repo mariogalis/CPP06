@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: magonzal <magonzal@student.42.fr>          +#+  +:+       +#+        */
+/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 18:29:52 by magonzal          #+#    #+#             */
-/*   Updated: 2023/11/15 18:56:55 by magonzal         ###   ########.fr       */
+/*   Updated: 2023/11/25 13:36:39 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include "CBase.hpp"
 #include <cstdlib>
 #include <iostream>
-
 
 
 Base * generate(void)
